@@ -1,7 +1,7 @@
 {
-  "type": "panel",
-  "name": "Simple Panel",
-  "id": "myorgid-simple-panel",
+  "type": "datasource",
+  "name": "Simple Lindb",
+  "id": "myorgid-simple-data",
 
   "info": {
     "description": "Simple React Panel",
