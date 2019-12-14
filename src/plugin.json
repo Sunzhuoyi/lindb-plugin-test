@@ -2,6 +2,12 @@
   "type": "datasource",
   "name": "Simple Lindb",
   "id": "myorgid-simple-data",
+  "metrics": true,
+  "alerting": true,
+  "annotations": true,
+  "queryOptions": {
+    "minInterval": true
+  },
 
   "info": {
     "description": "Simple React Panel",

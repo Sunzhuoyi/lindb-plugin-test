@@ -1,6 +1,12 @@
-import { PanelPlugin } from '@grafana/data';
-import { SimpleOptions, defaults } from './types';
-import { SimplePanel } from './SimplePanel';
-import { SimpleEditor } from './SimpleEditor';
+import { DataSourcePlugin } from '@grafana/data';
+import { LindbDatasource } from './datasource';
 
-export const plugin = new PanelPlugin<SimpleOptions>(SimplePanel).setDefaults(defaults).setEditor(SimpleEditor);
+import { LindbQueryEditor } from './components/LindbQueryEditor';
+import PromQueryField from './components/LindbQueryField';
+
+import { ConfigEditor } from './configuration/ConfigEditor';
+
+export const plugin = new DataSourcePlugin(LindbDatasource)
+    .setQueryEditor(LindbQueryEditor)
+    .setConfigEditor(ConfigEditor)
+    .setExploreMetricsQueryField(PromQueryField);
